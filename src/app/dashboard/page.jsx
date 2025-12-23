@@ -12,11 +12,21 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="flex min-h-screen bg-gray-900 text-white">
+      {/* Sidebar */}
       <Sidebar />
+
+      {/* Main Content */}
       <div className="flex-1 p-10">
-        <h1 className="text-3xl font-bold mb-5">Dashboard</h1>
-        <p>Welcome to your admin panel!</p>
+        {/* Header */}
+        <div className="border-b border-gray-700 pb-4 mb-6">
+          <h1 className="text-3xl sm:text-4xl font-bold">Dashboard</h1>
+        </div>
+
+        {/* Empty Content Area */}
+        <div className="flex items-center justify-center h-[70vh] text-gray-400">
+          <p className="text-xl">Select an option from the sidebar to get started</p>
+        </div>
       </div>
     </div>
   );
