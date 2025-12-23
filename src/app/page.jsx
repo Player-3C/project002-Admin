@@ -10,7 +10,7 @@ export default function Login() {
   const submit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/api/admin/login", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

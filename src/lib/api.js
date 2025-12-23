@@ -1,4 +1,4 @@
-const BASE = "http://localhost:5000"; // <-- your backend URL
+const BASE = process.env.NEXT_PUBLIC_API_URL; // <-- your backend URL
 
 export const getContact = async () => {
   const res = await fetch(`${BASE}/api/contact`);
